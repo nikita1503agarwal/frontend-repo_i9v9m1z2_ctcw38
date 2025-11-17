@@ -2,10 +2,12 @@ import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
 
 function Hero() {
+  const sceneUrl = import.meta.env.VITE_SPLINE_SCENE || 'https://prod.spline.design/zhZFnwyOYLgqlLWk/scene.splinecode'
+
   return (
     <section className="relative min-h-[92vh] w-full overflow-hidden">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/zhZFnwyOYLgqlLWk/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene={sceneUrl} style={{ width: '100%', height: '100%' }} />
       </div>
 
       <div className="relative z-10 pointer-events-none flex flex-col items-center justify-center min-h-[92vh] px-6">
